@@ -287,19 +287,26 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 .hero__media {
   position: absolute;
   inset: 0;
+  z-index: 0;
 }
 .hero__video {
-  width: 100%; height: 100%;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  z-index: 0;
 }
 .hero__img-fallback {
   position: absolute;
   inset: 0;
+  z-index: -1;
   background: linear-gradient(135deg, #2c2015 0%, #4a3520 30%, #6b4c2a 60%, #3d2c1a 100%);
 }
 .hero__overlay {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: linear-gradient(
     to bottom,
     rgba(0,0,0,0.25) 0%,

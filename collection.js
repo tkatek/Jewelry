@@ -113,7 +113,28 @@ const ALL_PRODUCTS = [
     desc: 'Bold open cuff set with 2ct of brilliant pavé diamonds.'
   },
 ];
-
+const PRODUCT_IMAGE_BY_ID = {
+  C001: 'images/one.jpg',
+  C002: 'images/two.jpg',
+  C003: 'images/tree.jpg',
+  C004: 'images/for.jpg',
+  C005: 'images/five.jpg',
+  C006: 'images/six.jpg',
+  C007: 'images/seven.jpg',
+  C008: 'images/nine.jpg',
+  C009: 'images/ten.jpg',
+  C010: 'images/twlv.jpg',
+  C011: 'images/eate.jpg',
+  C012: 'images/e6bffdb63f9675726729ffbb9b68786f.jpg',
+  C013: 'images/13.jpg',
+  C014: 'images/14.jpg',
+  C015: 'images/15.jpg',
+  C016: 'images/16.jpg',
+  C017: 'images/17.jpg',
+  C018: 'images/18.jpg',
+  C019: 'images/19.jpg',
+  C020: 'images/20.jpg',
+};
 /* ══════════════════════════════════════
    RENDER CARDS
 ══════════════════════════════════════ */
@@ -123,11 +144,11 @@ function buildCard(product) {
   article.dataset.category = product.category;
   article.dataset.price = product.price;
   article.dataset.name = product.name.toLowerCase();
+  const imageSrc = product.image || PRODUCT_IMAGE_BY_ID[product.id] || '';
 
   article.innerHTML = `
     <div class="product-card__img-wrap">
-      <img src="" alt="${product.name}" class="product-card__img" loading="lazy" />
-      <div class="product-card__placeholder">${product.name}</div>
+      <img src="${imageSrc}" alt="${product.name}" class="product-card__img" loading="lazy" />
       ${product.tag ? `<span class="product-card__tag">${product.tag}</span>` : ''}
       <button class="product-card__cart-btn" data-id="${product.id}" aria-label="Add to cart">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">

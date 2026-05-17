@@ -7,6 +7,36 @@
 
 const WHATSAPP_NUMBER = '212600000000'; // Replace with real number
 
+// Image map for cart items (supports both collection and top-products IDs)
+const CART_IMAGE_BY_ID = {
+  // Top products (homepage)
+  P001: 'images/one.jpg',
+  P002: 'images/two.jpg',
+  P003: 'images/tree.jpg',
+  P004: 'images/for.jpg',
+  // Collection products
+  C001: 'images/one.jpg',
+  C002: 'images/two.jpg',
+  C003: 'images/tree.jpg',
+  C004: 'images/for.jpg',
+  C005: 'images/five.jpg',
+  C006: 'images/six.jpg',
+  C007: 'images/seven.jpg',
+  C008: 'images/nine.jpg',
+  C009: 'images/ten.jpg',
+  C010: 'images/twlv.jpg',
+  C011: 'images/eate.jpg',
+  C012: 'images/e6bffdb63f9675726729ffbb9b68786f.jpg',
+  C013: 'images/13.jpg',
+  C014: 'images/14.jpg',
+  C015: 'images/15.jpg',
+  C016: 'images/16.jpg',
+  C017: 'images/17.jpg',
+  C018: 'images/18.jpg',
+  C019: 'images/19.jpg',
+  C020: 'images/20.jpg',
+};
+
 /* ══════════════════════════════════════
    RENDER CART
 ══════════════════════════════════════ */
@@ -86,7 +116,7 @@ function renderCart() {
     el.dataset.id = item.id;
     el.innerHTML = `
       <div class="cart-item__img-wrap">
-        <img src="" alt="${item.name}" class="cart-item__img" />
+        <img src="${CART_IMAGE_BY_ID[item.id] || item.image || ''}" alt="${item.name}" class="cart-item__img" />
         <div class="cart-item__placeholder">${item.name}</div>
       </div>
       <div class="cart-item__info">

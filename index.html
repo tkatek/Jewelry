@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUXÉ JEWELRY — Timeless Beauty</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- ═══════════════ NAV ═══════════════ -->
+  <nav class="nav" id="mainNav">
+    <div class="nav__logo">
+      <span class="nav__logo-diamond">◆</span>
+      <span class="nav__logo-text">LUXÉ <span>JEWELRY</span></span>
+    </div>
+    <ul class="nav__links">
+      <li><a href="index.html" class="nav__link active">Home</a></li>
+      <li><a href="full-collection.html" class="nav__link">Collection</a></li>
+      <li><a href="#about" class="nav__link">About Us</a></li>
+      <li><a href="#contact" class="nav__link">Contact</a></li>
+    </ul>
+    <div class="nav__actions">
+      <button class="nav__icon-btn" aria-label="Search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <button class="nav__icon-btn" aria-label="Account">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      <a href="cart.html" class="nav__icon-btn nav__cart-btn" aria-label="Cart">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="nav__cart-badge" id="cartBadge">0</span>
+      </a>
+    </div>
+    <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu__close" id="mobileClose">✕</button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="full-collection.html">Collection</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="cart.html">Cart</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero__media">
+      <video autoplay loop muted playsinline class="hero__video">
+        <source src="images/4974440-uhd_4096_2160_25fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero__img-fallback" aria-hidden="true"></div>
+    </div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Maison de Joaillerie · Est. 1987</p>
+      <h1 class="hero__title">
+        <span class="hero__title-line">Timeless</span>
+        <span class="hero__title-line italic">Beauty.</span>
+        <span class="hero__title-line">Made to Shine.</span>
+      </h1>
+      <p class="hero__sub">Luxury jewelry crafted with passion for those who value elegance.</p>
+      <div class="hero__ctas">
+        <a href="full-collection.html" class="btn btn--gold">Explore Collection</a>
+        <a href="#about" class="btn btn--ghost">Our Story</a>
+      </div>
+    </div>
+    <div class="hero__scroll-hint">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ TRUST BAR ═══════════════ -->
+  <section class="trust-bar">
+    <div class="trust-bar__inner">
+      <div class="trust-item">
+        <svg class="trust-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <div><strong>Premium Quality</strong><span>Finest materials</span></div>
+      </div>
+      <div class="trust-item">
+        <svg class="trust-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div><strong>Handcrafted</strong><span>By expert artisans</span></div>
+      </div>
+      <div class="trust-item">
+        <svg class="trust-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        <div><strong>Worldwide Shipping</strong><span>Delivered to your door</span></div>
+      </div>
+      <div class="trust-item">
+        <svg class="trust-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <div><strong>Secure Checkout</strong><span>100% safe payment</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ TOP SALES ═══════════════ -->
+  <section class="top-sales" id="topSales">
+    <div class="section-header">
+      <p class="section-eyebrow">Bestsellers</p>
+      <h2 class="section-title">Most Coveted Pieces</h2>
+      <div class="gold-divider"><span></span><span class="diamond-icon">◆</span><span></span></div>
+    </div>
+    <div class="products-grid products-grid--4" id="topSalesGrid">
+      <!-- Rendered by JS -->
+    </div>
+    <div class="section-cta">
+      <a href="full-collection.html" class="btn btn--outline">View Full Collection</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════ HORIZONTAL SCROLL TIMELINE ═══════════════ -->
+  <section class="legacy-section" id="legacySection">
+    <div class="legacy-pin-wrapper" id="legacyPinWrapper">
+      <div class="legacy-header">
+        <p class="section-eyebrow">Who We Are</p>
+        <h2 class="section-title">Our Legacy &amp; Process</h2>
+        <div class="gold-divider"><span></span><span class="diamond-icon">◆</span><span></span></div>
+      </div>
+      <div class="legacy-track-outer">
+        <div class="legacy-track" id="legacyTrack">
+          <!-- Timeline line -->
+          <div class="timeline-line"></div>
+
+          <!-- Node 1 -->
+          <div class="timeline-node timeline-node--above" data-index="1">
+            <div class="node-img-wrap">
+              <img src="https://source.unsplash.com/800x600/?jewelry,atelier" alt="The Vision" class="node-img" />
+              <div class="node-img-placeholder">01</div>
+            </div>
+            <div class="node-content">
+              <span class="node-year">1987</span>
+              <h3 class="node-title">The Vision</h3>
+              <p class="node-text">Born in Paris, our founder envisioned a house where artistry meets heritage — jewelry as wearable sculpture.</p>
+            </div>
+            <div class="node-dot"></div>
+          </div>
+
+          <!-- Node 2 -->
+          <div class="timeline-node timeline-node--below" data-index="2">
+            <div class="node-dot"></div>
+            <div class="node-content">
+              <span class="node-year">1995</span>
+              <h3 class="node-title">Master Sourcing</h3>
+              <p class="node-text">Only conflict-free diamonds and ethically mined gems pass our selection. We travel the world to find perfection.</p>
+            </div>
+            <div class="node-img-wrap">
+              <img src="" alt="Master Sourcing" class="node-img" />
+              <div class="node-img-placeholder">02</div>
+            </div>
+          </div>
+
+          <!-- Node 3 -->
+          <div class="timeline-node timeline-node--above" data-index="3">
+            <div class="node-img-wrap">
+              <img src="" alt="Handcrafting" class="node-img" />
+              <div class="node-img-placeholder">03</div>
+            </div>
+            <div class="node-content">
+              <span class="node-year">2002</span>
+              <h3 class="node-title">Handcrafting</h3>
+              <p class="node-text">Each piece takes up to 200 hours of skilled hand-work by master jewelers trained across three generations.</p>
+            </div>
+            <div class="node-dot"></div>
+          </div>
+
+          <!-- Node 4 -->
+          <div class="timeline-node timeline-node--below" data-index="4">
+            <div class="node-dot"></div>
+            <div class="node-content">
+              <span class="node-year">2015</span>
+              <h3 class="node-title">The Final Polish</h3>
+              <p class="node-text">Every gem is set by hand. Every surface is mirror-polished. Only then does a piece earn the LUXÉ mark.</p>
+            </div>
+            <div class="node-img-wrap">
+              <img src="" alt="The Final Polish" class="node-img" />
+              <div class="node-img-placeholder">04</div>
+            </div>
+          </div>
+
+          <!-- Node 5 -->
+          <div class="timeline-node timeline-node--above" data-index="5">
+            <div class="node-img-wrap">
+              <img src="" alt="Today" class="node-img" />
+              <div class="node-img-placeholder">05</div>
+            </div>
+            <div class="node-content">
+              <span class="node-year">Today</span>
+              <h3 class="node-title">Global Atelier</h3>
+              <p class="node-text">From our Paris atelier to homes worldwide — LUXÉ jewelry travels as stories written in gold and light.</p>
+            </div>
+            <div class="node-dot"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ ABOUT ═══════════════ -->
+  <section class="about" id="about">
+    <div class="about__img-col">
+      <div class="about__img-frame">
+        <img src="" alt="About LUXÉ" class="about__img" />
+        <div class="about__img-placeholder">
+          <span>LUXÉ</span>
+          <small>Est. 1987</small>
+        </div>
+      </div>
+      <div class="about__accent-card">
+        <span class="about__accent-num">230K</span>
+        <span class="about__accent-label">Happy Clients Worldwide</span>
+      </div>
+    </div>
+    <div class="about__text-col">
+      <p class="section-eyebrow">Our Story</p>
+      <h2 class="about__title">Where Art Meets <em>Eternal Elegance</em></h2>
+      <p class="about__body">Founded in 1987 in the heart of Paris, LUXÉ Jewelry was born from a singular obsession: to create pieces that transcend time. We believe that jewelry is not merely an accessory — it is a declaration, an heirloom, a story told in precious metal and stone.</p>
+      <p class="about__body">Each collection is conceived by our lead designer and executed by master artisans who have devoted their lives to the craft. No shortcuts. No compromises. Only extraordinary beauty.</p>
+      <a href="#" class="btn btn--gold-outline">Discover Our Atelier</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CHOOSE TYPE ═══════════════ -->
+  <section class="choose-type">
+    <div class="section-header">
+      <p class="section-eyebrow">Shop by Category</p>
+      <h2 class="section-title">Choose The Type</h2>
+      <div class="gold-divider"><span></span><span class="diamond-icon">◆</span><span></span></div>
+    </div>
+    <div class="type-grid">
+      <a href="full-collection.html?filter=rings" class="type-card">
+        <div class="type-card__img-wrap">
+          <img src="" alt="Rings" class="type-card__img" />
+          <div class="type-card__placeholder">Rings</div>
+        </div>
+        <span class="type-card__label">Rings</span>
+        <span class="type-card__icon">→</span>
+      </a>
+      <a href="full-collection.html?filter=necklaces" class="type-card type-card--large">
+        <div class="type-card__img-wrap">
+          <img src="" alt="Necklaces" class="type-card__img" />
+          <div class="type-card__placeholder">Necklaces</div>
+        </div>
+        <span class="type-card__label">Necklaces</span>
+        <span class="type-card__icon">→</span>
+      </a>
+      <a href="full-collection.html?filter=earrings" class="type-card">
+        <div class="type-card__img-wrap">
+          <img src="" alt="Earrings" class="type-card__img" />
+          <div class="type-card__placeholder">Earrings</div>
+        </div>
+        <span class="type-card__label">Earrings</span>
+        <span class="type-card__icon">→</span>
+      </a>
+      <a href="full-collection.html?filter=bracelets" class="type-card type-card--wide">
+        <div class="type-card__img-wrap">
+          <img src="" alt="Bracelets" class="type-card__img" />
+          <div class="type-card__placeholder">Bracelets</div>
+        </div>
+        <span class="type-card__label">Bracelets</span>
+        <span class="type-card__icon">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CONTACT ═══════════════ -->
+  <section class="contact" id="contact">
+    <div class="contact__inner">
+      <div class="contact__text">
+        <p class="section-eyebrow">Get in Touch</p>
+        <h2 class="contact__title">We'd Love to<br><em>Hear From You</em></h2>
+        <p class="contact__body">Visit our atelier, or reach us by appointment. Our specialists will guide you to the perfect piece for every occasion.</p>
+        <ul class="contact__details">
+          <li><strong>Address:</strong> 14 Rue de la Paix, Paris 75002</li>
+          <li><strong>Email:</strong> hello@luxejewelry.com</li>
+          <li><strong>Phone:</strong> +33 1 42 60 00 00</li>
+        </ul>
+      </div>
+      <form class="contact__form" id="contactForm">
+        <div class="form-group">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-input" placeholder="Your full name" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-input" placeholder="your@email.com" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-input form-textarea" placeholder="How can we help you?"></textarea>
+        </div>
+        <button type="submit" class="btn btn--gold btn--full">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <span class="footer__logo">◆ LUXÉ JEWELRY</span>
+        <p class="footer__tagline">Crafted with passion since 1987.</p>
+        <div class="footer__socials">
+          <a href="#" aria-label="Instagram" class="footer__social">IG</a>
+          <a href="#" aria-label="Pinterest" class="footer__social">PT</a>
+          <a href="#" aria-label="Facebook" class="footer__social">FB</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title">Shop</h4>
+        <ul>
+          <li><a href="full-collection.html">All Jewelry</a></li>
+          <li><a href="#">Rings</a></li>
+          <li><a href="#">Necklaces</a></li>
+          <li><a href="#">Earrings</a></li>
+          <li><a href="#">Bracelets</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title">Collections</h4>
+        <ul>
+          <li><a href="#">Eternal Series</a></li>
+          <li><a href="#">La Carre Collection</a></li>
+          <li><a href="#">Solara Ring</a></li>
+          <li><a href="#">New Arrivals</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__col-title">Help</h4>
+        <ul>
+          <li><a href="#">Sizing Guide</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 LUXÉ Jewelry. All rights reserved.</span>
+      <div class="footer__legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
